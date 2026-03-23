@@ -1,11 +1,11 @@
 import unittest
-from PartA import Artist, Song, Album, Playlist
+from PartA import *
 
 class TestPartA(unittest.TestCase):
-    
+
     def test_artist_is_instance_artist(self):
         a1 = Artist("Taylor Swift", "13-12-1989", "USA")
-        self.assertEqual(a1, Artist)
+        self.assertIsInstance(a1, Artist)
     def test_song_is_instance_of_song(self):
         s1 = Song("Love Story", "Taylor Swift", 2008)
         self.assertIsInstance(s1, Song)
@@ -17,3 +17,5 @@ class TestPartA(unittest.TestCase):
     def test_playlist_is_instance_of_playlist(self):
         p1 = Playlist("My Playlist")
         self.assertIsInstance(p1, Playlist)   
+
+unittest.main()
